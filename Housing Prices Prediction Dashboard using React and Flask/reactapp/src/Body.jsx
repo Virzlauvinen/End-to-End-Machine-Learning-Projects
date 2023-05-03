@@ -100,7 +100,8 @@ const Training = ({ series, setSeries }) => {
       learningRate: learningRate,
     };
     await axios
-      .post("https://pratik-housing-prices-flask.herokuapp.com/train", body)
+      // .post("https://pratik-housing-prices-flask.herokuapp.com/train", body)
+      .post("http://127.0.0.1:5000/train", body)
       .then((res) => {
         console.log("RMSE error: ", res.data);
         const newData = {

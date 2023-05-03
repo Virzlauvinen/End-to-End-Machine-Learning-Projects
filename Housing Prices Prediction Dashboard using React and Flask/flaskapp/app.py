@@ -12,7 +12,7 @@ from sklearn.ensemble import RandomForestRegressor
 from lightgbm import LGBMRegressor
 
 app = Flask(__name__, static_url_path='/static')
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 @app.route('/prediction', methods=['POST'])
 def hello_world():

@@ -103,7 +103,8 @@ const Prediction = ({ series, setSeries }) => {
       };
       await axios
         .post(
-          "https://pratik-housing-prices-flask.herokuapp.com/prediction",
+          // "https://pratik-housing-prices-flask.herokuapp.com/prediction",
+          "http://127.0.0.1:5000/prediction",
           body
         )
         .then((res) => {
